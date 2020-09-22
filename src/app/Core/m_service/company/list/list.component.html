@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card">
+        <div class="car-header">
+            <h3>Compañias</h3>
+        </div>
+        <div class="car-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombre de la Compañia</th>
+                        <th>Numero de Celular</th>
+                        <th>Email</th>
+                        <th>Dirección</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let company of lstproduct.content" class="text-center">
+                        <td><a href="http://localhost:4200/edit">{{company.tradename}}</a></td>
+                        <td>{{company.phone}}</td>
+                        <td>{{company.email}}</td>
+                        <td>{{company.address}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

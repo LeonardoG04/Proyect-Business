@@ -1,0 +1,10 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CompanyService {
+
+  constructor(private http:HttpClient) { }
+}
