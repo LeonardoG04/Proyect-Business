@@ -9,6 +9,38 @@
     
 }
 
+.header{
+    background-color: #b80f22;
+    color: white;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 10px 60px;
+}
+/*
+h5{
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}*/
+.exit{
+    width: 150px;
+    border: none;
+    outline: none;
+    height: 30px;
+    background: rgb(1, 1, 66);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    position: absolute;
+    right:0;
+    margin-right: 10px;
+    position:absolute;
+    right:0
+}
 .sidebar{
     height: 100vh;
     width: 250px;
@@ -16,7 +48,7 @@
 }
 
 .list-items{
-    padding-top: 20px;
+    padding-top: 60px;
 }
 
 .list-item{

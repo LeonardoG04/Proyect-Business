@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/Core/_base/services/user.service';
-import { login } from 'src/app/Commons/user/login';
-import { User } from 'src/app/Commons/user/user';
+import { login } from 'src/app/Core/_base/models/user/login';
+import { User } from 'src/app/Core/_base/models/user/user';
 
 @Component({
   selector: 'app-login',
@@ -63,7 +63,6 @@ export class LoginComponent implements OnInit {
         }
       }
     )
-    //this.router.navigate(['/dashboard']);
   }
 
 }
