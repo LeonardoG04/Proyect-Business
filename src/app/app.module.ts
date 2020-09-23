@@ -9,13 +9,15 @@ import { RecoverComponent } from './View/pages/auth/recover/recover.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './View/pages/dashboard/dashboard.component';
+import { ListPrincipalComponent } from './View/company/list-principal/list-principal.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     RecoverComponent,
-    DashboardComponent
+    DashboardComponent,
+    ListPrincipalComponent
   ],
   imports: [
     BrowserModule,
