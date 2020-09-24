@@ -59,6 +59,11 @@ export class LoginComponent implements OnInit {
       (data)=>{        
         this.lstLogin=data;
         if(data!=null){
+
+          let usuarioResponse=JSON.stringify(this.lstLogin);
+          localStorage.setItem("session",usuarioResponse);
+
+
           this.router.navigate(['/menu']);
         }
       }

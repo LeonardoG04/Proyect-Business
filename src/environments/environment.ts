@@ -4,7 +4,15 @@
 
 export const environment = {
   production: false,
-  endpoint:"http://localhost:8090/business/"
+  endpoint:"http://localhost:8090/business/",
+
+  apis:{
+    company: {
+      GET: "http://localhost:8090/business/service-user/userCompanyDetail/listUserCompany",
+      POST: ""
+    }
+  },
+  companyUser:"http://localhost:8085//business/"
 };
 
 /*
