@@ -1,8 +1,12 @@
 .container{
     width: 620px;
     height: 370px;
-    position: relative;    
+    position: absolute;    
     text-align: center;
-    top: 50%;
-    left: 30%;
+}
+
+button{
+    background: white;
+    border-color: white;
+    border-radius: 100vh;
 }

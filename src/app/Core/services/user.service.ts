@@ -11,7 +11,7 @@ import { login } from 'src/app/Core/models/user/login';
 })
 export class UserService {
 
-    urlUser:String=environment.endpoint+"/service-user";
+    urlUser=environment.endpoint+"/service-user";
     private httpHeaders=new HttpHeaders({'Content-Type': 'application/json'})
   constructor(private http:HttpClient, private router: Router) { }
 
@@ -23,8 +23,9 @@ export class UserService {
     return false;
   }
 
-  getLogue(x:login){
-    return this.http.post<User>(`http://localhost:8090/business/service-user/user/login`,x,{headers:this.httpHeaders});
+  getLogue(x:login){//http://localhost:8090/business/service-user/user/login
+    return this.http.post<User>('http://localhost:8090/business/service-user/user/login',x,{headers:this.httpHeaders});
+    /*return this.http.post<User>(this.urlUser+'/user/login',x,{headers:this.httpHeaders});*/
   }
 
   /*navigate(x:login){

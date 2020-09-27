@@ -5,6 +5,7 @@ import { CompanyService } from 'src/app/Core/services/company.service';
 import { User } from 'src/app/Core/models/user/user';
 import { Company } from 'src/app/Core/models/company/company';
 
+
 @Component({
   selector: 'app-list-principal',
   templateUrl: './list-principal.component.html',
@@ -12,25 +13,24 @@ import { Company } from 'src/app/Core/models/company/company';
 })
 export class ListPrincipalComponent implements OnInit {
 
-  lstcompany:Page=new Page();
-  lstcompanyUser:Company=new Company();
+  
   session:User =new User();
-  constructor(private service:CompanyService, private router: Router) { }
+  response:any;
+  lsCompany:Company[]=[];
+  constructor(private companyService:CompanyService, private router: Router) { }
 
   ngOnInit(): void {
       
     if(localStorage.getItem("session")){
 
       this.session=JSON.parse(localStorage.getItem("session"));
-      this.service.getCompany(this.session.userId,0,5)
-      .subscribe(data=>{
-        this.lstcompany=data;
-       
-        this.service.getCompanyId(this.lstcompanyUser.companyId).subscribe((company)=>{
-            this.lstcompanyUser=company;
-          })
-         console.log(this.lstcompany)
-      })
+      
+      this.companyService.getCompanyId(this.session.userId).subscribe(
+        (response)=>{
+          this.response=response;
+          this.lsCompany=this.response.content;
+        }
+      )
 
     }
   }

@@ -10,26 +10,42 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Code</th>
-                        <th>Company</th>
-                        <th>User</th>
+                        <th>Id</th>
+                        <th>Empresa</th>
+                        <th>Representante</th>
+                        <th>Dirección</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let company of lstcompany.content" class="text-center">
-                        <td><a href="http://localhost:4200/edit">{{company.userCompanyDetailId}}</a></td>
-                        <td>{{company.companyId}}</td>
-                        <td>{{company.userId.userId}}</td>
+                    <tr class="text-center" *ngFor="let item of lsCompany">
+                        <td><a href="">{{item.company_id}}</a></td>
+                        <td><a href="">{{item.tradename}}</a></td>
+                        <td><a href="">{{item.legal_representante}}</a></td>
+                        <td><a href="">{{item.address}}</a></td>
                         <td>
-                            <button class="btn btn-danger" style="margin-left: 10px;">
-                                <img src="https://cdn.pixabay.com/photo/2013/07/13/10/06/abort-156539_960_720.png"
+                            <button class="btn " style="margin-left: 10px;">
+                                <img src="https://ayudawp.com/wp-content/uploads/2018/04/borrar-plugins-wordpress.png"
                                 height="25px"
                                 width="25px">
                             </button>
                         </td>
                     </tr>
                 </tbody>
+                
             </table>
+            
         </div>
+        
     </div>
+    <br>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+
 </div>

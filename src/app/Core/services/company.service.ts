@@ -24,11 +24,8 @@ export class CompanyService {
     });
   }
 
-  getCompanyId(companyId){
-    return this.http.get<Company>(this.urlCompany+"Company/list"+companyId,{
-      params:{
-        idCompany: companyId
-      }
-    })
+  getCompanyId(userId){
+    return this.http.get("http://localhost:8085/business/services-company/demo/getBussiness?idUsuario="+userId);
   }
+  
 }

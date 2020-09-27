@@ -12,7 +12,8 @@ export const environment = {
       POST: ""
     }
   },
-  companyUser:"http://localhost:8085//business/"
+  companyUser:"http://localhost:8085/business/",
+
 };
 
 /*
